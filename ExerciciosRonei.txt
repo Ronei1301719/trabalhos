@@ -1,0 +1,479 @@
+01 - SELECT * from funcionario
+
+funcionario_id	primeiro_nome	ultimo_nome	endereco_id	foto	email	loja_id	ativo	usuario	senha	ultima_atualizacao
+1	Mike	Hillyer	3	NULL	Mike.Hillyer@sakilastaff.com	1	1	Mike	8cb2237d0679ca88db6464eac60da96345513964	2006-02-15 04:57:16
+2	Jon	Stephens	4	NULL	Jon.Stephens@sakilastaff.com	2	1	Jon	8cb2237d0679ca88db6464eac60da96345513964	2006-02-15 04:57:16
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2 - select primeiro_nome from cliente where endereco_id = 5;
+
+MARY	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3 - select * from idioma
+
+idioma_id 	nome 	ultima_atualizacao 	
+1	English	2006-02-15 05:02:19	
+2	Italian	2006-02-15 05:02:19	
+3	Japanese	2006-02-15 05:02:19	
+4	Mandarin	2006-02-15 05:02:19	
+5	French	2006-02-15 05:02:19	
+6	German	2006-02-15 05:02:19	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4 - select * from pagamento where valor = 4.99 and pagamento_id < 20
+
+pagamento_id 	cliente_id 	funcionario_id 	aluguel_id 	valor 	data_de_pagamento 	ultima_atualizacao 	
+6	1	1	1725	4.99	2005-06-16 15:18:57	2006-02-15 22:12:30	
+7	1	1	2308	4.99	2005-06-18 08:41:48	2006-02-15 22:12:30	
+12	1	1	5244	4.99	2005-07-09 13:24:07	2006-02-15 22:12:30	
+13	1	1	5326	4.99	2005-07-09 16:38:01	2006-02-15 22:12:30	
+16	1	1	7841	4.99	2005-07-28 09:04:45	2006-02-15 22:12:30	
+17	1	2	8033	4.99	2005-07-28 16:18:23	2006-02-15 22:12:30	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5 - select titulo, descricao from filme where ano_de_lancamento = 2006 and duracao_da_locacao = 6 and custo_de_substituicao = 20.99
+
+titulo 	descricao 	
+ACADEMY DINOSAUR	A Epic Drama of a Feminist And a Mad Scientist who...	
+AMADEUS HOLY	A Emotional Display of a Pioneer And a Technical W...	
+DAZED PUNK	A Action-Packed Story of a Pioneer And a Technical...	
+DEEP CRUSADE	A Amazing Tale of a Crocodile And a Squirrel who m...	
+DOZEN LION	A Taut Drama of a Cat And a Girl who must Defeat a...	
+DROP WATERFRONT	A Fanciful Documentary of a Husband And a Explorer...	
+GLADIATOR WESTWARD	A Astounding Reflection of a Squirrel And a Sumo W...	
+GOLDMINE TYCOON	A Brilliant Epistle of a Composer And a Frisbee wh...	
+HOLY TADPOLE	A Action-Packed Display of a Feminist And a Pionee...	
+IMPACT ALADDIN	A Epic Character Study of a Frisbee And a Moose wh...	
+INTOLERABLE INTENTIONS	A Awe-Inspiring Story of a Monkey And a Pastry Che...	
+MAUDE MOD	A Beautiful Documentary of a Forensic Psychologist...	
+MOD SECRETARY	A Boring Documentary of a Mad Cow And a Cat who mu...	
+MONSOON CAUSE	A Astounding Tale of a Crocodile And a Car who mus...	
+PRIDE ALAMO	A Thoughtful Drama of a A Shark And a Forensic Psy...	
+SHAWSHANK BUBBLE	A Lacklusture Story of a Moose And a Monkey who mu...	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+6 - select * from categoria
+
+categoria_id 	nome 	ultima_atualizacao 	
+1	Action	2006-02-15 04:46:27	
+2	Animation	2006-02-15 04:46:27	
+3	Children	2006-02-15 04:46:27	
+4	Classics	2006-02-15 04:46:27	
+5	Comedy	2006-02-15 04:46:27	
+6	Documentary	2006-02-15 04:46:27	
+7	Drama	2006-02-15 04:46:27	
+8	Family	2006-02-15 04:46:27	
+9	Foreign	2006-02-15 04:46:27	
+10	Games	2006-02-15 04:46:27	
+11	Horror	2006-02-15 04:46:27	
+12	Music	2006-02-15 04:46:27	
+13	New	2006-02-15 04:46:27	
+14	Sci-Fi	2006-02-15 04:46:27	
+15	Sports	2006-02-15 04:46:27	
+16	Travel	2006-02-15 04:46:27	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+7 - select * from categoria where nome = "Classics"
+
+4	Classics	2006-02-15 04:46:27	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+8 - select nome from categoria where nome like "C%"
+
+nome 	
+Children	
+Classics	
+Comedy	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+9 - select nome from categoria where nome like "D%"
+
+nome 	
+Documentary	
+Drama	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+10 - select nome from categoria where nome like "S%"
+
+nome 	
+Sci-Fi	
+Sports	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+11 - select nome from categoria where nome like "%a"
+
+Drama	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+12 - select nome from categoria where nome like "%s"
+
+
+nome 	
+Classics	
+Games	
+Sports	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+13 - select nome from categoria where nome like "_a%"
+
+nome 	
+Family	
+Games	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+14 - select nome from categoria where nome like "__a%"
+
+nome 	
+Classics	
+Drama	
+Travel	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+15 - select * from endereco where endereco like "22%"
+
+endereco_id 	endereco 	endereco2 	bairro 	cidade_id 	cep 	telefone 	ultima_atualizacao 	
+218	226 Brest Manor		California	508	2299	785881412500	2006-02-15 04:45:30	
+288	226 Halifax Street		Xinxiang	277	58492	790651020929	2006-02-15 04:45:30	
+382	220 Hidalgo Drive		Kermanshah	265	45298	342720754566	2006-02-15 04:45:30	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+16 - SELECT IDIOMA_ID, NOME FROM IDIOMA
+
+IDIOMA_ID 	NOME 	
+1	English	
+2	Italian	
+3	Japanese	
+4	Mandarin	
+5	French	
+6	German	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+17 - select primeiro_nome, ultimo_nome from cliente where cliente_id < 10
+
+primeiro_nome 	ultimo_nome 	
+MARY	SMITH	
+PATRICIA	JOHNSON	
+LINDA	WILLIAMS	
+BARBARA	JONES	
+ELIZABETH	BROWN	
+JENNIFER	DAVIS	
+MARIA	MILLER	
+SUSAN	WILSON	
+MARGARET	MOORE	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+18 - select titulo from filme where custo_de_substituicao BETWEEN 5 and 10
+
+titulo	
+ANACONDA CONFESSIONS	
+CIDER DESIRE	
+CONTROL ANTHEM	
+DAISY MENAGERIE	
+DELIVERANCE MULHOLLAND	
+DUDE BLINDNESS	
+EDGE KISSING	
+ENCINO ELF	
+FACTORY DRAGON	
+FELLOWSHIP AUTUMN	
+GANDHI KWAI	
+GUNFIGHTER MUSSOLINI	
+HEARTBREAKERS BRIGHT	
+JASON TRAP	
+KISSING DOLLS	
+LIFE TWISTED	
+MAIDEN HOME	
+MATRIX SNOWMAN	
+METROPOLIS COMA	
+NEWTON LABYRINTH	
+NORTH TEQUILA	
+NOTORIOUS REUNION	
+OPPOSITE NECKLACE	
+PAPI NECKLACE	
+PATHS CONTROL	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+19 - select titulo from filme where titulo like "%North%"
+
+titulo	
+CHICAGO NORTH	
+GREATEST NORTH	
+JOON NORTHWEST	
+NORTH TEQUILA	
+NORTHWEST POLISH	
+SIMON NORTH	
+VERTIGO NORTHWEST	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+20 - select titulo from filme where titulo like "%North%" or titulo like "%Drop%"
+
+titulo	
+CHICAGO NORTH	
+DROP WATERFRONT	
+GREATEST NORTH	
+JOON NORTHWEST	
+NORTH TEQUILA	
+NORTHWEST POLISH	
+PRIVATE DROP	
+SIMON NORTH	
+VERTIGO NORTHWEST	
+WONDERFUL DROP	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+21 - select count(*) from inventario
+
+count(*)	
+4581	
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+22 - select count(*) from filme where duracao_do_filme in (46,47,48)
+
+23	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+23 - select * from cliente where cliente_id <= 12
+
+
+cliente_id	loja_id	primeiro_nome	ultimo_nome	email	endereco_id	ativo	data_criacao	ultima_atualizacao	
+1	1	MARY	SMITH	MARY.SMITH@sakilacustomer.org	5	1	2006-02-14 22:04:36	2006-02-15 04:57:20	
+2	1	PATRICIA	JOHNSON	PATRICIA.JOHNSON@sakilacustomer.org	6	1	2006-02-14 22:04:36	2006-02-15 04:57:20	
+3	1	LINDA	WILLIAMS	LINDA.WILLIAMS@sakilacustomer.org	7	1	2006-02-14 22:04:36	2006-02-15 04:57:20	
+4	2	BARBARA	JONES	BARBARA.JONES@sakilacustomer.org	8	1	2006-02-14 22:04:36	2006-02-15 04:57:20	
+5	1	ELIZABETH	BROWN	ELIZABETH.BROWN@sakilacustomer.org	9	1	2006-02-14 22:04:36	2006-02-15 04:57:20	
+6	2	JENNIFER	DAVIS	JENNIFER.DAVIS@sakilacustomer.org	10	1	2006-02-14 22:04:36	2006-02-15 04:57:20	
+7	1	MARIA	MILLER	MARIA.MILLER@sakilacustomer.org	11	1	2006-02-14 22:04:36	2006-02-15 04:57:20	
+8	2	SUSAN	WILSON	SUSAN.WILSON@sakilacustomer.org	12	1	2006-02-14 22:04:36	2006-02-15 04:57:20	
+9	2	MARGARET	MOORE	MARGARET.MOORE@sakilacustomer.org	13	1	2006-02-14 22:04:36	2006-02-15 04:57:20	
+10	1	DOROTHY	TAYLOR	DOROTHY.TAYLOR@sakilacustomer.org	14	1	2006-02-14 22:04:36	2006-02-15 04:57:20	
+11	2	LISA	ANDERSON	LISA.ANDERSON@sakilacustomer.org	15	1	2006-02-14 22:04:36	2006-02-15 04:57:20	
+12	1	NANCY	THOMAS	NANCY.THOMAS@sakilacustomer.org	16	1	2006-02-14 22:04:36	2006-02-15 04:57:20	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+24 - select * from categoria where nome <> "Games"
+
+categoria_id	nome	ultima_atualizacao	
+1	Action	2006-02-15 04:46:27	
+2	Animation	2006-02-15 04:46:27	
+3	Children	2006-02-15 04:46:27	
+4	Classics	2006-02-15 04:46:27	
+5	Comedy	2006-02-15 04:46:27	
+6	Documentary	2006-02-15 04:46:27	
+7	Drama	2006-02-15 04:46:27	
+8	Family	2006-02-15 04:46:27	
+9	Foreign	2006-02-15 04:46:27	
+11	Horror	2006-02-15 04:46:27	
+12	Music	2006-02-15 04:46:27	
+13	New	2006-02-15 04:46:27	
+14	Sci-Fi	2006-02-15 04:46:27	
+15	Sports	2006-02-15 04:46:27	
+16	Travel	2006-02-15 04:46:27	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+25 - select count(valor) from pagamento
+
+count(valor)	
+16049	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+26 - select avg(valor) from pagamento
+
+avg(valor)	
+4.200667	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+27 - select round (4.200667, 2)
+
+4.20	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+28 - insert into categoria (categoria_id, nome, ultima_atualizacao) values (17, "Gospel", null)
+
+Select * from categoria where nome = "gospel"
+
+17	Gospel	2018-03-07 01:22:33	
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+29 - update endereco set bairro = "Cajuru" where endereco_id = 5
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+30 - update endereco set endereco = "1208 Rio Purus", bairro = "Weissopolis" where endereco_id = 20
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+31 - update endereco set telefone = 35431587 where endereco_id = 65
+
+select telefone from endereco where endereco_id = 65 >> 35431587	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+32 -  insert into funcionario (funcionario_id, primeiro_nome, ultimo_nome, endereco_id, foto, email, 
+loja_id, ativo, usuario, senha, ultima_atualizacao) VALUES (3, 'Ronei', 'Rodrigues', 4, null, 
+'roneirodrigues14@outlook.com', 2,1, 'ronei', 'ronei', null)
+
+select * from funcionario WHERE funcionario_id = 3
+
+3	Ronei	Rodrigues	4	NULL	roneirodrigues14@outlook.com	2	1	ronei	ronei	2018-03-08 23:03:58	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+33 - select * from pais where pais like 'A%' order by pais desc
+
+pais_id	pais   1	ultima_atualizacao	
+10	Azerbaijan	2006-02-15 04:44:00	
+9	Austria	2006-02-15 04:44:00	
+8	Australia	2006-02-15 04:44:00	
+7	Armenia	2006-02-15 04:44:00	
+6	Argentina	2006-02-15 04:44:00	
+5	Anguilla	2006-02-15 04:44:00	
+4	Angola	2006-02-15 04:44:00	
+3	American Samoa	2006-02-15 04:44:00	
+2	Algeria	2006-02-15 04:44:00	
+1	Afghanistan	2006-02-15 04:44:00	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+34 - select * from pais where pais like '%e%'
+
+pais_id	pais	ultima_atualizacao	
+2	Algeria	2006-02-15 04:44:00	
+3	American Samoa	2006-02-15 04:44:00	
+6	Argentina	2006-02-15 04:44:00	
+7	Armenia	2006-02-15 04:44:00	
+10	Azerbaijan	2006-02-15 04:44:00	
+12	Bangladesh	2006-02-15 04:44:00	
+13	Belarus	2006-02-15 04:44:00	
+16	Brunei	2006-02-15 04:44:00	
+19	Cameroon	2006-02-15 04:44:00	
+22	Chile	2006-02-15 04:44:00	
+25	Congo, The Democratic Republic of the	2006-02-15 04:44:00	
+26	Czech Republic	2006-02-15 04:44:00	
+27	Dominican Republic	2006-02-15 04:44:00	
+28	Ecuador	2006-02-15 04:44:00	
+29	Egypt	2006-02-15 04:44:00	
+30	Estonia	2006-02-15 04:44:00	
+31	Ethiopia	2006-02-15 04:44:00	
+32	Faroe Islands	2006-02-15 04:44:00	
+34	France	2006-02-15 04:44:00	
+35	French Guiana	2006-02-15 04:44:00	
+36	French Polynesia	2006-02-15 04:44:00	
+38	Germany	2006-02-15 04:44:00	
+39	Greece	2006-02-15 04:44:00	
+40	Greenland	2006-02-15 04:44:00	
+41	Holy See (Vatican City State)	2006-02-15 04:44:00	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+35 - select descricao from filme where titulo = 'BLANKET BEVERLY'
+
+A Emotional Documentary of a Student And a Girl wh...	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+36 - select * from ator where primeiro_nome like 'j%' and ator_id < 20
+
+ator_id	primeiro_nome	ultimo_nome	ultima_atualizacao	
+4	JENNIFER	DAVIS	2006-02-15 04:34:33	
+5	JOHNNY	LOLLOBRIGIDA	2006-02-15 04:34:33	
+9	JOE	SWANK	2006-02-15 04:34:33	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+37 - update ator set primeiro_nome = 'ASTROGILDO' where primeiro_nome like '%ZERO%' or ultimo_nome like '%ZERO%'
+
+select * from ator where primeiro_nome like '%ASTRO%'
+
+11	ASTROGILDO	CAGE	2018-03-08 23:19:42	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+38 - delete from filme_ator where ator_id = 25 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+39 - delete from aluguel where cliente_id = 524
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+40 - update cidade set cidade = 'Lumbumbam' where cidade = 'Lubumbashi'
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+41 - update aluguel set cliente_id = 1 where aluguel_id = 3488 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+42 - select * from aluguel where aluguel_id = 3488
+
+3488	2005-07-05 23:32:49	898	1	2005-07-15 02:01:49	2	2018-03-09 23:21:10	
+	
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+43 - insert into filme_texto(filme_id, titulo, descricao) values (1,'ACADEMY DINOSAUR','A Epic Drama of a Feminist And a Mad Scientist who...')
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+44 - insert into filme_texto (filme_id, titulo, descricao) values (2,'ACE GOLDFINGER','A Astounding Epistle of a Database Administrator A...')
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+45 - insert into filme_texto (filme_id, titulo, descricao) values (3,'ADAPTATION HOLES','A Astounding Reflection of a Lumberjack And a Car ...')
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+46 - insert into filme_texto (filme_id, titulo, descricao) values (4,'AFFAIR PREJUDICE','A Fanciful Documentary of a Frisbee And a Lumberja...')
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+47 - insert into filme_texto (filme_id, titulo, descricao) values (5,'AFRICAN EGG','A Fast-Paced Documentary of a Pastry Chef And a De...')
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+48 - insert into filme_texto (filme_id, titulo, descricao) values (6,'AGENT TRUMAN','A Intrepid Panorama of a Robot And a Boy who must ...')
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+49 - insert into filme_texto (filme_id, titulo, descricao) values (8,'AIRPORT POLLOCK','A Epic Tale of a Moose And a Girl who must Confron...')
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+50 - select * from filme_texto
+
+filme_id 	titulo 	descricao 	
+1	ACADEMY DINOSAUR	A Epic Drama of a Feminist And a Mad Scientist who...	
+2	ACE GOLDFINGER	A Astounding Epistle of a Database Administrator A...	
+3	ADAPTATION HOLES	A Astounding Reflection of a Lumberjack And a Car ...	
+4	AFFAIR PREJUDICE	A Fanciful Documentary of a Frisbee And a Lumberja...	
+5	AFRICAN EGG	A Fast-Paced Documentary of a Pastry Chef And a De...	
+6	AGENT TRUMAN	A Intrepid Panorama of a Robot And a Boy who must ...	
+7	AIRPLANE SIERRA	A Touching Saga of a Hunter And a Butler who must ...	
+8	AIRPORT POLLOCK	A Epic Tale of a Moose And a Girl who must Confron...	
